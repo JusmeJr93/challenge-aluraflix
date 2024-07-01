@@ -7,12 +7,14 @@ const ModalContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: #03122f;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 15px;
+  border: 5px solid #6bd1ff;
   z-index: 1000;
   max-width: 600px;
   width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 `;
 
 const Overlay = styled.div`
@@ -33,15 +35,30 @@ const CloseButton = styled.button`
   border: none;
   font-size: 20px;
   cursor: pointer;
-  color: #000;
+  color: #fff;
+`;
+
+const ModalTitle = styled.h1`
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+`;
+
+const ModalSubtitle = styled.p`
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
 `;
 
 export default function EditVideoModal({ video, onClose, onSubmit }) {
   return (
     <>
       <Overlay onClick={onClose} />
+
       <ModalContainer>
         <CloseButton onClick={onClose}>×</CloseButton>
+        <ModalTitle>Editar Video</ModalTitle>
+        <ModalSubtitle>Modifica los campos necesarios</ModalSubtitle>
         <EditVideoForm
           initialData={video}
           onSubmit={onSubmit}

@@ -5,80 +5,96 @@ import VideoContext from "../../context/VideoContext";
 
 // Styled-components para el estilo del formulario
 const FormGroup = styled.div`
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   width: 100%;
   max-width: 600px;
 `;
 
 const StyledLabel = styled.label`
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   color: #fff;
+  font-weight: bold;
 `;
 
 const StyledSelect = styled.select`
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #262626;
-  border-radius: 5px;
-  background: #262626;
-  color: #fff;
+  width: 95%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f0f0f0;
+  color: #333;
+
+  option {
+    width: 100%;
+  }
 `;
 
 const StyledInput = styled.input`
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #262626;
-  border-radius: 5px;
-  background: #262626;
-  color: #fff;
+  width: 95%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f0f0f0;
+  color: #333;
 `;
 
 const StyledTextArea = styled.textarea`
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #262626;
-  border-radius: 5px;
+  width: 95%;
+  min-height: 80px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   resize: none;
-  background: #262626;
-  color: #fff;
+  background: #f0f0f0;
+  color: #333;
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 95%;
+  margin-top: 20px;
 `;
 
 const StyledButton = styled.button`
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 5px;
-  background-color: #2271d1;
+  border-radius: 8px;
+  background-color: #007bff;
   color: #fff;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
 `;
 
 const ClearButton = styled.button`
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #ff0000;
   color: #fff;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #cc0000;
+  }
 `;
 
 const FormContainer = styled.div`
-  position: relative;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  form {
-    width: 100%;
-    margin: 0 20%;
-  }
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 `;
 
 const NewVideoForm = ({ onSubmit }) => {

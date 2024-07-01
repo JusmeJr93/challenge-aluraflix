@@ -19,28 +19,29 @@ const StyledLabel = styled.label`
 const StyledSelect = styled.select`
   width: 100%;
   padding: 10px;
-  border: 1px solid #262626;
-  border-radius: 5px;
-  background: #262626;
+  border: 1px solid #6bd1ff;
+  border-radius: 10px;
+  background: #03122f;
   color: #fff;
 `;
 
 const StyledInput = styled.input`
   width: 100%;
   padding: 10px;
-  border: 1px solid #262626;
-  border-radius: 5px;
-  background: #262626;
+  border: 1px solid #6bd1ff;
+  border-radius: 10px;
+  background: #03122f;
   color: #fff;
 `;
 
 const StyledTextArea = styled.textarea`
   width: 100%;
+  min-height: 80px;
   padding: 10px;
-  border: 1px solid #262626;
-  border-radius: 5px;
+  border: 1px solid #6bd1ff;
+  border-radius: 10px;
+  background: #03122f;
   resize: none;
-  background: #262626;
   color: #fff;
 `;
 
@@ -70,11 +71,14 @@ const ClearButton = styled.button`
   font-size: 16px;
 `;
 
-const FormContainer = styled.div`
-  position: relative;
-  width: 50%;
-  display: flex;
-  justify-content: center;
+const StyledForm = styled.form`
+  /* position: relative; */
+  width: 100%;
+  max-width: 550px;
+  padding: 20px;
+  background-color: #03122f;
+  /* border-radius: 10px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 `;
 
 const EditVideoForm = ({ initialData = {}, onSubmit }) => {
@@ -114,8 +118,8 @@ const EditVideoForm = ({ initialData = {}, onSubmit }) => {
   };
 
   return (
-    <FormContainer>
-      <form onSubmit={handleSubmit}>
+    <>
+      <StyledForm onSubmit={handleSubmit}>
         <FormGroup>
           <StyledLabel htmlFor="category">Categoria</StyledLabel>
           <StyledSelect
@@ -188,8 +192,8 @@ const EditVideoForm = ({ initialData = {}, onSubmit }) => {
             Limpiar
           </ClearButton>
         </ButtonGroup>
-      </form>
-    </FormContainer>
+      </StyledForm>
+    </>
   );
 };
 

@@ -4,21 +4,24 @@ import VideoContext from "../context/VideoContext";
 import NewVideoForm from "../components/Form/NewVideoForm";
 import { v4 as uuidv4 } from "uuid";
 
-const VideoFormContainer = styled.div`
+const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 25px;
+  justify-content: center;
+  min-height: 100vh;
   padding: 20px;
-  background-color: #333;
-  color: #fff;
-  width: 100%;
+  background-color: #121212;
 `;
 
-const FormHeader = styled.div`
-  text-align: center;
-  width: 50%;
+const PageTitle = styled.h1`
+  color: #fff;
+  margin-bottom: 10px;
+`;
+
+const PageSubtitle = styled.p`
+  color: #fff;
+  margin-bottom: 40px;
 `;
 
 export default function NewVideo() {
@@ -31,12 +34,12 @@ export default function NewVideo() {
   };
 
   return (
-    <VideoFormContainer>
-      <FormHeader>
-        <h1>Nuevo Video</h1>
-        <p>Complete el formulario para crear una nueva tarjeta de video</p>
-      </FormHeader>
+    <PageContainer>
+      <PageTitle>Nuevo Video</PageTitle>
+      <PageSubtitle>
+        Complete el formulario para crear una nueva tarjeta de video
+      </PageSubtitle>
       <NewVideoForm key={formKey} onSubmit={handleSubmit} />
-    </VideoFormContainer>
+    </PageContainer>
   );
 }

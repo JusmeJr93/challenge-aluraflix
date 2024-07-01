@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 
 const VideoContext = createContext();
 
-const intialData = [
+const initialData = [
   {
     id: 1,
     category: "Front-End",
@@ -88,7 +88,7 @@ const intialData = [
 ];
 
 export const VideoProvider = ({ children }) => {
-  const [videos, setVideos] = useState(intialData);
+  const [videos, setVideos] = useState(initialData);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const categories = [
