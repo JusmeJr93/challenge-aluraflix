@@ -6,10 +6,12 @@ import styled from "styled-components";
 const PlayerContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   background-color: #262626;
   color: #fff;
+  min-height: 65vh;
 `;
 
 const VideoFrame = styled.iframe`
