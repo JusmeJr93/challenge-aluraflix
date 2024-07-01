@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "category": "Front-End",
+    "titulo": "Como utilizar el Display block, inline, inline-block",
+    "img": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Jean.png",
+    "video": "https://www.youtube.com/embed/AG2QssLpQzI?si=6Yn355wcxAqU7_Ld",
+    "descripcion": "Lorem ipsum dolor ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  {
+    "id": 2,
+    "category": "Innovación y gestión",
+    "titulo": "Productividad en el trabajo remoto",
+    "img": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Gabi.png",
+    "video": "https://www.youtube.com/embed/AULPtYo25Lw?si=UGdKX1NSrEcQ0jfn",
+    "descripcion": "Lorem ipsum dolor sit amet sit amet consectetur adipisicing elit."
+  },
+  {
+    "id": 3,
+    "category": "Back-End",
+    "titulo": "¿Cuáles son las principales áreas de la programación?",
+    "img": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Genesis.png",
+    "video": "https://www.youtube.com/embed/03cxUlwLVt4?si=zVCUQNO-eS2RZQTO",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur consectetur adipisicing elit."
+  },
+  {
+    "id": 4,
+    "category": "Data Science",
+    "titulo": "Detección de intruso con IA",
+    "img": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Ale.png",
+    "video": "https://www.youtube.com/embed/5T_Q_NtNLZE?si=M7D0JeagaKqsoaFs",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing adipisicing elit."
+  }
+]
