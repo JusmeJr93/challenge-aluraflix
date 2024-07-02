@@ -41,7 +41,6 @@ const CategoryManagementContainer = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
   justify-content: space-between;
-  /* width: 50%; */
   margin-top: 20px;
 `;
 

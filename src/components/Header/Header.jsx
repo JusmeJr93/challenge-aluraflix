@@ -42,7 +42,6 @@ const Button = styled.button`
 `;
 
 export default function Header() {
-  //to toggle styles for selected pages
   const [selectedPage, setSelectedPage] = useState("home");
   const selectHome = () => setSelectedPage("home");
   const selectNewVideo = () => setSelectedPage("newVideo");

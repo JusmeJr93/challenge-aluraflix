@@ -81,7 +81,7 @@ const AddCategoryForm = ({ onClose }) => {
           />
         </FormGroup>
 
-        <SubmitButton type="submit">Agregar Categoría</SubmitButton>
+        <SubmitButton type="submit">Agregar</SubmitButton>
       </form>
     </FormContainer>
   );

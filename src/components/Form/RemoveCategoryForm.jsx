@@ -78,7 +78,7 @@ const RemoveCategoryForm = ({ onClose }) => {
           </RadioGroup>
         </FormGroup>
 
-        <SubmitButton type="submit">Eliminar Categoría</SubmitButton>
+        <SubmitButton type="submit">Eliminar</SubmitButton>
       </form>
     </FormContainer>
   );
