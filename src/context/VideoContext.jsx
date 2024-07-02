@@ -87,24 +87,16 @@ const initialData = [
   },
 ];
 
+const initialCategories = [
+  { category: "Front-End", bgColor: "#6BD1FF" },
+  { category: "Back-End", bgColor: "#00C86F" },
+  { category: "Innovación y gestión", bgColor: "#FFBA05" },
+];
+
 export const VideoProvider = ({ children }) => {
   const [videos, setVideos] = useState(initialData);
   const [selectedVideo, setSelectedVideo] = useState(null);
-
-  const categories = [
-    {
-      category: "Front-End",
-      bgColor: "#6BD1FF",
-    },
-    {
-      category: "Back-End",
-      bgColor: "#00C86F",
-    },
-    {
-      category: "Innovación y gestión",
-      bgColor: "#FFBA05",
-    },
-  ];
+  const [categories, setCategories] = useState(initialCategories);
 
   const addVideo = (video) => {
     setVideos([...videos, video]);
@@ -118,6 +110,16 @@ export const VideoProvider = ({ children }) => {
     setVideos(videos.map((video) => (video.id === id ? updatedVideo : video)));
   };
 
+  const addCategory = (newCategory) => {
+    setCategories([...categories, newCategory]);
+  };
+
+  const removeCategory = (categoryToRemove) => {
+    setCategories(
+      categories.filter((category) => category.category !== categoryToRemove)
+    );
+  };
+
   return (
     <VideoContext.Provider
       value={{
@@ -128,6 +130,8 @@ export const VideoProvider = ({ children }) => {
         editVideo,
         selectedVideo,
         setSelectedVideo,
+        addCategory,
+        removeCategory,
       }}
     >
       {children}
