@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+// Custom hook para manejar videos y categorías
 const useVideos = () => {
   const [videos, setVideos] = useState([]);
   const [categories, setCategories] = useState([]);

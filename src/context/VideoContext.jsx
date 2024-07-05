@@ -2,8 +2,10 @@
 import { createContext, useState } from "react";
 import useVideos from "../hooks/useVideos";
 
+// Crear el contexto de Video
 const VideoContext = createContext();
 
+// Proveedor de VideoContext para envolver los componentes necesarios
 export const VideoProvider = ({ children }) => {
   const { videos, setVideos, categories, setCategories, loading, error } =
     useVideos();
@@ -35,14 +37,17 @@ export const VideoProvider = ({ children }) => {
     );
   };
 
+  // Mensaje de carga mientras los datos se están obteniendo
   if (loading) {
     return <div>Loading...</div>;
   }
 
+  // Mensaje de error si ocurre algún problema al obtener los datos
   if (error) {
     return <div>Error: {error.message}</div>;
   }
 
+  // Proveer el contexto con valores y funciones a los componentes hijos
   return (
     <VideoContext.Provider
       value={{
